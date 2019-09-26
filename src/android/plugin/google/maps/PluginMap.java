@@ -1013,6 +1013,10 @@ public class PluginMap extends MyPlugin implements OnMarkerClickListener,
       }
     }
 
+    //HACK: Changes made by Pocket Games, we couldn't pass the width param from JS.
+    // Set the info windows width to 60% of the camera window
+    layoutParams.width = (int) ((double) mapView.getWidth() * (0.6));
+
     windowLayer.setLayoutParams(layoutParams);
 
     //----------------------------------------
